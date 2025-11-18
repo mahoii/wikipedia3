@@ -39,7 +39,6 @@ main {
 }
 
 .infobox {
-  width: 25%;
   background-color: #fff;
   border: 1px solid #a2a9b1;
   padding: 10px;
@@ -76,12 +75,31 @@ article {
   background-color: #fff;
   border: 1px solid #a2a9b1;
   padding: 15px;
+  /* Improve text spacing and justification for better readability */
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.6;
+  word-spacing: 0.02em;
+  /* Keep the final line left-aligned for a natural ragged edge */
+  text-align-last: left;
+}
+
+article p {
+  /* Ensure paragraphs inside article inherit the improved spacing */
+  margin: 0 0 1em 0;
+  text-align: inherit;
+  text-justify: inherit;
+  hyphens: inherit;
+  line-height: inherit;
 }
 
 article h2 {
   border-bottom: 1px solid #a2a9b1;
   padding-bottom: 4px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 article a {
@@ -99,4 +117,9 @@ footer {
   border-top: 1px solid #a2a9b1;
   font-size: 0.85em;
   color: #54595d;
+}
+
+#logo {
+  padding-left: 55px;
+  padding-bottom: 5px;
 }
